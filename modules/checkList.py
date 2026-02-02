@@ -64,7 +64,6 @@ def stay_str(l):
 	return ss
 
 
-
 def stay_int(l):
 	si=[]
 	for i in l:
@@ -73,4 +72,13 @@ def stay_int(l):
 		 elif type(i) is int:
 		 	si.append(i)
 	return si	
+
+def stay_float(l):
+	sf = []
+	for i in l:
+		 if type(i) is float:
+		 	sf.append(i)
+		 elif type(i) is str:
+		 	continue
+	return sf	
 
