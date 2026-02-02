@@ -50,7 +50,20 @@ def isall_float(f):
 			check= "yes"
 			break
 			
-	return False if check =="yes" else True 
+	return False if check =="yes" else True
+
+
+
+def stay_str(l):
+	ss = []	
+	for i in l:
+		if type(i) is str:
+			ss.append(i)
+		elif type(i) is bool or type(i) is float or type(i) is int:
+			continue
+	return ss
+
+
 
 def stay_int(l):
 	si=[]
