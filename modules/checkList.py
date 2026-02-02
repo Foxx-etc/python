@@ -82,3 +82,27 @@ def stay_float(l):
 		 	continue
 	return sf	
 
+def drop_neg_int(l):
+	pos = []	
+	for i in l:
+		if i < 0:
+			continue
+		else:
+			pos.append(i)
+			
+	return pos
+
+
+
+def drop_pos_int(l):
+	neg = []
+	for i in l:
+		if i > 0:
+			continue
+		else:
+			neg.append(i)
+			
+	return neg
+
+
+
