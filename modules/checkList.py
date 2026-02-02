@@ -52,3 +52,12 @@ def isall_float(f):
 			
 	return False if check =="yes" else True 
 
+def stay_int(l):
+	si=[]
+	for i in l:
+		 if type(i) is str():
+		 	l.remove(i)
+		 elif type(i) is int:
+		 	si.append(i)
+	return si	
+
