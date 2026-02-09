@@ -1,0 +1,19 @@
+def drop_space(s):
+	new_str = ""
+	
+	for i in s:
+		if i==" ":
+			continue
+		else:
+			new_str += i
+
+	return new_str
+
+
+def space(s):
+	for i in s:
+		if i==" ":
+			return True
+		else:
+			continue
+	return False
