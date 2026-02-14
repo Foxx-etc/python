@@ -59,7 +59,7 @@ def isall_float(c, intAsFloat = True):
 
 # Parameter must be a string otherwise a TypeError is raised
 # Removes Everything except alphabets
-# If parameter preserve_space is True, then it won't removes space
+# If parameter preserve_space is True, then it won't removes spaces
 def stay_str(s , preserve_space = True):
 	if type(s) is not str:
 		raise TypeError("Argument must be a string")
@@ -81,23 +81,31 @@ def stay_str(s , preserve_space = True):
 
 
 
-def stay_int(l):
-	si=[]
-	for i in l:
-		 if type(i) is str():
-		 	l.remove(i)
-		 elif type(i) is int:
-		 	si.append(i)
+
+# Parameter must be a string otherwise a TypeError is raised
+# Removes Everything except Numbers
+# If parameter preserve_space is True, then it won't removes spaces
+def stay_int(n, preserve_space = True):
+	if type(n) is not str:
+		raise TypeError("Argument must be a string")
+	
+	si = ""	
+	for i in n:
+		if i.isnumeric():
+			si += i
+			
+		elif i == " ":
+			if preserve_space == True:
+				si += i
+			else:
+				continue
+			
+		else:
+			continue	
 	return si	
 
-def stay_float(l):
-	sf = []
-	for i in l:
-		 if type(i) is float:
-		 	sf.append(i)
-		 elif type(i) is str:
-		 	continue
-	return sf	
+
+
 
 def drop_neg_int(l):
 	pos = []	
