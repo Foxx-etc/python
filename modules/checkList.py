@@ -1,67 +1,84 @@
-#True If all elements in List are Integer
-def isall_int(l):
-	check= str()
-	for i in l:
+# True If all elements in container are Integers False otherwise
+# If floatAsInt is True, then floats are treated as Integers
+def isall_int(c, floatAsInt = True):
+	for i in c:
 		if type(i) is int:
 			continue
+		
+		elif type(i) is float:
+			if floatAsInt == True:
+				continue
+			else:
+				return False
+		
 		else:
-			check= "yes"
-			break
-			
-	return False if check =="yes" else True 
+			return False
+	return True
 
 
 
-#True If all elements in List are string
+
+# True If all elements in List are string False otherwise
 def isall_str(s):
-	check= str()
 	for i in s:
 		if type(i) is str:
 			continue
 		else:
-			check= "yes"
-			break
-			
-	return False if check =="yes" else True 
+			return False
+	return True 
 
 
 
-
-#True If all elements in List are bool
 def isall_bool(b):
-	check= str()
 	for i in b:
 		if type(i) is bool:
 			continue
 		else:
-			check= "yes"
-			break
-			
-	return False if check =="yes" else True 
+			return False
+	return True
 
 
-#True If all elements in List are float
-def isall_float(f):
-	check= str()
-	for i in f:
+
+# True If all elements in container are Float False otherwise
+# If intAsFloat is True, then integers are treated as floats
+def isall_float(c, intAsFloat = True):
+	for i in c:
 		if type(i) is float:
 			continue
-		else:
-			check= "yes"
-			break
+		
+		elif type(i) is int:
+			if intAsFloat == True:
+				continue
+			else:
+				return False
 			
-	return False if check =="yes" else True
+		else:
+			return False
+	return True
 
 
-
-def stay_str(l):
-	ss = []	
-	for i in l:
-		if type(i) is str:
-			ss.append(i)
-		elif type(i) is bool or type(i) is float or type(i) is int:
-			continue
+# Parameter must be a string otherwise a TypeError is raised
+# Removes Everything except alphabets
+# If parameter preserve_space is True, then it won't removes space
+def stay_str(s , preserve_space = True):
+	if type(s) is not str:
+		raise TypeError("Argument must be a string")
+	
+	ss = ""	
+	for i in s:
+		if i.isalpha():
+			ss += i
+			
+		elif i == " ":
+			if preserve_space == True:
+				ss += i
+			else:
+				continue
+			
+		else:
+			continue	
 	return ss
+
 
 
 def stay_int(l):
