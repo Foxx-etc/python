@@ -106,27 +106,31 @@ def stay_int(n, preserve_space = True):
 
 
 
-
-def drop_neg_int(l):
-	pos = []	
-	for i in l:
+# Removes Negative Integers
+def drop_neg_int(c) -> list:
+	if type(c) is str:
+		raise TypeError("parameter must not be a string")
+	
+	pos = []
+	for i in c:
 		if i < 0:
 			continue
 		else:
-			pos.append(i)
-			
+			pos.append(i)	
 	return pos
 
 
-
-def drop_pos_int(l):
+# Removes Positive Integers
+def drop_pos_int(c) -> list:
+	if type(c) is str:
+		raise TypeError("parameter must not be a string")
+	
 	neg = []
-	for i in l:
+	for i in c:
 		if i > 0:
 			continue
 		else:
-			neg.append(i)
-			
+			neg.append(i)		
 	return neg
 
 
