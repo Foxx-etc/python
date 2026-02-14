@@ -1,8 +1,0 @@
-user = int(input("Enter The nth Number To Generate Fibonacci Series : "))
-
-fib = [0,1]
-
-for i in range(user - 2):
-	fib.append(fib[-2] + fib[-1])
-
-print(*fib,sep="  ")
