@@ -215,3 +215,25 @@ class Update_iter:
         return neg
 
 
+
+# This class is for dict work
+class DictWork:  
+    
+    # this function is created in aim of accessing an element from dict's value of type: list, tuple, or set 
+    def selectSingle(f : dict , k: dict.keys, index: int):
+        ls = f.__getitem__(k)
+        return ls[index]
+            
+
+    # this function is created in aim of accessing an element from dict's value of type: list, tuple, or set
+    # If iterate is True, then never use this function in print() it has None Return type
+    # If iterate is False(default) It has return type
+    def selectAll(f: dict, k: dict.keys, iterate:bool = False):
+        if iterate == False:
+            ls = [i for i in f[k]]
+            return ls
+        else:
+            for i in f[k]:
+                print(i)
+
+
