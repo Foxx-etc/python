@@ -1,6 +1,6 @@
 # True If all elements in container are Integers False otherwise
 # If floatAsInt is True, then floats are treated as Integers
-def isall_int(c, floatAsInt = True):
+def isall_int(c, floatAsInt = True) -> bool:
 	for i in c:
 		if type(i) is int:
 			continue
@@ -19,7 +19,7 @@ def isall_int(c, floatAsInt = True):
 
 
 # True If all elements in List are string False otherwise
-def isall_str(s):
+def isall_str(s) -> bool:
 	for i in s:
 		if type(i) is str:
 			continue
@@ -29,7 +29,7 @@ def isall_str(s):
 
 
 
-def isall_bool(b):
+def isall_bool(b) -> bool:
 	for i in b:
 		if type(i) is bool:
 			continue
@@ -41,7 +41,7 @@ def isall_bool(b):
 
 # True If all elements in container are Float False otherwise
 # If intAsFloat is True, then integers are treated as floats
-def isall_float(c, intAsFloat = True):
+def isall_float(c, intAsFloat = True) -> bool:
 	for i in c:
 		if type(i) is float:
 			continue
@@ -60,7 +60,7 @@ def isall_float(c, intAsFloat = True):
 # Parameter must be a string otherwise a TypeError is raised
 # Removes Everything except alphabets
 # If parameter preserve_space is True, then it won't removes spaces
-def stay_str(s , preserve_space = True):
+def stay_str(s , preserve_space = True) -> str:
 	if type(s) is not str:
 		raise TypeError("Argument must be a string")
 	
@@ -85,7 +85,7 @@ def stay_str(s , preserve_space = True):
 # Parameter must be a string otherwise a TypeError is raised
 # Removes Everything except Numbers
 # If parameter preserve_space is True, then it won't removes spaces
-def stay_int(n, preserve_space = True):
+def stay_int(n, preserve_space = True) -> str:
 	if type(n) is not str:
 		raise TypeError("Argument must be a string")
 	
