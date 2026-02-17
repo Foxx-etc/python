@@ -1,9 +1,16 @@
 
-# All the functions defined under this class returns boolean value
+
 class Verify:
-    # True If all elements in container are Integers False otherwise
-    # If floatAsInt is True, then floats are treated as Integers
+    """
+    All the functions defined under this class returns boolean value
+    """
+    
     def isall_int(c, floatAsInt = True) -> bool:
+        """
+        True If all elements in container are Integers False otherwise
+        If floatAsInt is True, then floats are treated as Integers
+        """
+
         for i in c:
             if type(i) is int:
                 continue
@@ -18,9 +25,13 @@ class Verify:
                 return False
         return True
 
- 
-    # True If all elements in List are string False otherwise
+
+        
+    
     def isall_str(s) -> bool:
+        """
+        True If all elements in List are string False otherwise
+        """
         for i in s:
             if type(i) is str:
                 continue
@@ -39,9 +50,13 @@ class Verify:
         return True
 
 
-    # True If all elements in container are Float False otherwise
-    # If intAsFloat is True, then integers are treated as floats
+
+    
     def isall_float(c, intAsFloat = True) -> bool:
+        """
+        True If all elements in container are Float False otherwise
+        If intAsFloat is True, then integers are treated as floats
+        """
         for i in c:
             if type(i) is float:
                 continue
@@ -57,8 +72,11 @@ class Verify:
         return True
         
         
-    # Return True If Spaces In String
+    
     def is_space(s) -> bool:
+        """
+        Return True If Spaces In String
+        """
         if type(s) is not str:
             raise TypeError(f"parameter must be a string not {type(s)}")
         
@@ -70,13 +88,18 @@ class Verify:
         return False
 
 
-# Under this class, In functions, The arguments must be string and returns an updated string
-class Update_str:
+class UpdateStr:
+    """
+    Under this class, In functions, The arguments must be string and returns an updated string
+    """
         
-    # Parameter must be a string otherwise a TypeError is raised
-    # Removes Everything except alphabets
-    # If parameter preserve_space is True, then it won't removes spaces
+    
     def stay_str(s , preserve_space = True) -> str:
+        """
+        Parameter must be a string otherwise a TypeError is raised
+        Removes Everything except alphabets
+        If parameter preserve_space is True, then it won't removes spaces
+        """
         if type(s) is not str:
             raise TypeError("Argument must be a string")
         
@@ -96,10 +119,13 @@ class Update_str:
         return ss
 
 
-    # Parameter must be a string otherwise a TypeError is raised
-    # Removes Everything except Numbers
-    # If parameter preserve_space is True, then it won't removes spaces
+    
     def stay_int(n, preserve_space = True) -> str:
+        """
+        Parameter must be a string otherwise a TypeError is raised
+        Removes Everything except Numbers
+        If parameter preserve_space is True, then it won't removes spaces
+        """
         if type(n) is not str:
             raise TypeError("Argument must be a string")
         
@@ -119,8 +145,11 @@ class Update_str:
         return si	
 
 
-    # Removes The Space In String And Joins The Characters
+    
     def drop_space(s) -> str:
+        """
+        Removes The Space In String And Joins The Characters
+        """
         if type(s) is not str:
             raise TypeError(f"parameter must be a string not {type(s)}")
         
@@ -134,11 +163,16 @@ class Update_str:
 
 
 
-# Parameter must be Iterable and returns int value
 class Count:
+    """
+    Parameter must be Iterable and returns int value
+    """
         
-    # Counts The Number Of String In Iterables and Return Int value
+    
     def count_str(c) -> int:
+        """
+        Counts The Number Of String In Iterables and Return Int value
+        """
         if type(c) is str or type(c) is int or type(c) is float:
             raise TypeError(f"parameter must not be a {type(c)}")
         
@@ -151,8 +185,11 @@ class Count:
         return int(number)
 
 
-    # Counts The Number Of Integer Values In Iterables and Return Int value
+
     def count_int(c) -> int:
+        """
+        Counts The Number Of Integer Values In Iterables and Return Int value
+        """
         if type(c) is str or type(c) is int or type(c) is float:
             raise TypeError(f"parameter must not be a {type(c)}")
         
@@ -165,8 +202,10 @@ class Count:
         return int(number)
 
 
-    # Counts The Number Of Float Values In Iterables and Return Int value
     def count_float(c) -> int:
+        """
+        Counts The Number Of Float Values In Iterables and Return Int value
+        """
         if type(c) is str or type(c) is int or type(c) is float:
             raise TypeError(f"parameter must not be a {type(c)}")
         
@@ -180,10 +219,12 @@ class Count:
 
 
 
-class Update_iter:
+class UpdateIter:
         
-    # Removes Negative Integers, If string present as an element in iterable object ignores it
     def drop_neg_int(c) -> list:
+        """
+        Removes Negative Integers, If string present as an element in iterable object ignores it
+        """
         if type(c) is str or type(c) is int or type(c) is float:
             raise TypeError("parameter must not be a string")
         
@@ -194,10 +235,12 @@ class Update_iter:
             else:
                 pos.append(i)	
         return pos
-
-
-    # Removes Positive Integers, If string present as an element in iterable object ignores it
+    
+    
     def drop_pos_int(c) -> list:
+        """
+        Removes Positive Integers, If string present as an element in iterable object ignores it
+        """
         if type(c) is str or type(c) is int or type(c) is float:
             raise TypeError("parameter must not be a string")
         
@@ -210,18 +253,24 @@ class Update_iter:
         return neg
 
 
-# This class is for dict work
-class DictWork:      
-    # this function is created in aim of accessing an element from dict's value of type: list, tuple, or set 
+
+class DictWork:
+    """This class is for dict work"""     
+
+    
     def selectSingle(f : dict , k: dict.keys, index: int):
+        """this function is created in aim of accessing an element from dict's value of type: list, tuple, or set"""
         ls = f.__getitem__(k)
         return ls[index]
             
 
-    # this function is created in aim of accessing an element from dict's value of type: list, tuple, or set
-    # If iterate is True, then never use this function in print() it has None Return type
-    # If iterate is False(default) It has return type
+    
     def selectAll(f: dict, k: dict.keys, iterate:bool = False):
+        """
+        this function is created in aim of accessing an element from dict's value of type: list, tuple, or set
+        If iterate is True, then never use this function in print() it has None Return type
+        If iterate is False(default) It has return type
+        """
         if iterate == False:
             ls = [i for i in f[k]]
             return ls
@@ -229,15 +278,30 @@ class DictWork:
             for i in f[k]:
                 print(i)
 
+
     
-    # iterate keys and values in a formated way defaults add a design '|' in between key and value
-    # if dict is empty gives a ValueError
-    def show(d, design='|') -> None:
+    def show(d, design='|' , intToStr = True):
+        """
+        iterate keys and values in a formated way defaults add a design '|' in between key and value
+        if dict is empty gives a ValueError.
+        For Design Purpose, We have to measure length of keys so TypeError if key is type 'int'. Default is set to True to convert int to str to measure length.
+        """
         if type(d) is not dict:
             raise TypeError(f"parameter must be a { type({}) }")
 
-        allKeysLength = [ len(n) for n in d.keys() ] 
+        # for design purpose, type 'int' has no length we may raise TypeError
+        allKeysLength = []
+        for n in d.keys():
+            if type(n) is not str:
+                if intToStr == True:
+                    allKeysLength.append(len(str(n)))
+                else:
+                    raise TypeError(f"key cannot be of type 'int' or 'float'")
+                
+            else:
+                allKeysLength.append(len(n))
         
+
         if allKeysLength == []:
             raise ValueError("dict cannot be Empty!")
         
@@ -245,14 +309,17 @@ class DictWork:
 
         # formatting for better visibility
         for k, v in zip(d.keys(), d.values()):
-            print(f'{k.ljust(longestLength)} {design} {v}')
+            print( f'{str(k).ljust(longestLength)} {design} {v}' )
+        return ""
 
 
 class Restricted:
 
-    # prom is a prompt to user
-    # mess is an error message when user input unexpected
     def only_alpha(prom= "Enter : ", mess= "No Numbers!\n"):
+        """"
+        prom is a prompt to user
+        mess is an error message when user input unexpected
+        """
         while True:
             try:
                 letter= input(prom)
@@ -261,12 +328,17 @@ class Restricted:
                 return letter
             except:
                 print(mess)
-
     
-    # Same as only_alpha() but this function takes two additional parameters 
-    # restrict(user must input what developer ask and default is 'yes'.)
-    # res_mess( or restrict_message, if user not input restrict)
+
+
+  
     def onlySingle_alpha(prom= "Enter : ", mess= "No Numbers!\n", restrict= 'yes', res_mess= "No!\n"):
+        """"
+        Same as only_alpha() but this function takes two additional parameters
+
+        restrict(user must input what developer ask and default is 'yes'.)
+        res_mess( or restrict_message, if user not input restrict)
+        """
         while True:
             try:
                 letter= input(prom)
@@ -285,9 +357,13 @@ class Restricted:
                 print(mess)
 
 
-    # prom is a prompt to user
-    # mess is an error message when user input unexpected
+
+    
     def only_int(prom= "Enter : ", mess= "No Letters!\n"):
+        """
+        prom is a prompt to user
+        mess is an error message when user input unexpected
+        """
         while True:
             try:
                 number= input(prom)
@@ -298,10 +374,14 @@ class Restricted:
                 print(mess)
 
     
-    # Same as only_int() but this function takes two additional parameters 
-    # restrict(user must input what developer ask and default is 1. Careful! Use quotation around number or it may considered as res_mess)
-    # res_mess( or restrict_message, if user not input restrict)
+    
     def onlySingle_int(prom= "Enter : ", mess= "No Letters!\n", restrict= '1', res_mess= "No!\n"):
+        """
+        Same as only_int() but this function takes two additional parameters 
+        
+        restrict(user must input what developer ask and default is 1. Careful! Use quotation around number or it may considered as res_mess)
+        res_mess( or restrict_message, if user not input restrict)
+        """
         while True:
             try:
                 number= input(prom)
@@ -320,14 +400,11 @@ class Restricted:
                 print(mess)
 
 
+
 if __name__ == '__main__':
-    a = Restricted.onlySingle_alpha(prom="Enter a Number : ",mess= "No Numbers\n", res_mess= "Not This\n")
-    print(a)
 
-
-"""
-TODO : Documentation
-TODO : Add More Regular functions
-"""
-
-    
+    u={
+        5 : 1,
+        8 : 0,
+        424222: "df"
+    }
