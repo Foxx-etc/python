@@ -19,30 +19,87 @@
 """
 
 
-# example : 1
-n = []
+# example : 1.1
+# nothing terminates in this
+a = []
 while True:
     for i in range(5):
         user = input("Enter : ")
         if user == 'quit':
             break
         else:
-            n.append(user)
-
+            a.append(user)
 print(n)
 
 
+# example : 1.2
+# enter quit or anything will run forever
+b = []
+while True:
+    for i in range(5):
+        user = input("Enter : ")
+        if user == 'quit':
+            break
+        else:
+            b.append(user)
+        break
+print(b)
 
 
-# # example : 2
-p = []
+# example : 1.3
+# if entered 'quit' for once will leads to termination of program, else entered anything for 5 times will as well terminate it
+c = []
+while True:
+    for i in range(5):
+        user = input("Enter : ")
+        if user == 'quit':
+            break
+        else:
+            c.append(user)
+    break
+print(c)
+
+
+
+
+# example : 2.1
+# 5 times 'quit' will terminate it and entered anything except 'quit' will never terminate
+d = []
 for i in range(5):
     while True:
         user = input("Enter : ")
         if user == 'quit':
             break
         else:
-            p.append(user)
+            d.append(user)
+print(d)
 
-print(p)
+
+# example : 2.2
+# 5 times quit or 5 times anything will terminate the program
+e = []
+for i in range(5):
+    while True:
+        user = input("Enter : ")
+        if user == 'quit':
+            break
+        else:
+            e.append(user)
+        break
+print(e)
+
+
+# example : 2.3
+f = []
+# single 'quit' will terminate and entered except 'quit' runs infinite
+for i in range(5):
+    while True:
+        user = input("Enter : ")
+        if user == 'quit':
+            break
+        else:
+            f.append(user)
+    break
+print(f)
+
 
