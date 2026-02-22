@@ -6,7 +6,7 @@ The Directory, examples, has example on various python keyword or methods
 
 
 
-## 🌐 Socials:
+# 🌐 Socials:
 [![email](https://img.shields.io/badge/Email-D14836?logo=gmail&logoColor=white)](mailto:charlieadya2007@gmail.com) 
 
 # 💻 Tech Stack:
