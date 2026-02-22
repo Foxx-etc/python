@@ -6,6 +6,13 @@ The Directory, examples, has example on various python keyword or methods
 
 
 
+
+
+
+
+
+
+
 [![email](https://img.shields.io/badge/Email-D14836?logo=gmail&logoColor=white)](mailto:charlieadya2007@gmail.com) 
 
 
