@@ -12,7 +12,6 @@ idle_at_floor = 0
 #will display upcoming, downcoming or already at floor
 def req_at_floor(n):
     n = int(n)
-    
     global idle_at_floor
     if n == idle_at_floor:
         print("Elevator Already At The Floor!\n")
