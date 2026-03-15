@@ -5,6 +5,6 @@ Does Not Raise An Exception Even If The File We Are Changing The Name Exists in 
 
 >[!TIP]
 ```if pathlib.Path(path).exists():```
-    ```raise Exception```
+```    raise Exception```
 
 For This Purpose Use Conditional Statement Along With pathlib Module
