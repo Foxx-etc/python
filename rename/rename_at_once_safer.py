@@ -2,13 +2,13 @@ import holi , os , pathlib as p
 
 print(holi.lcyan)
 print("This Program Is Designed If You Moved Some Unnamed files Under Belonging files And Want To Rename By Caring The Number") 
-print(holi.lred)
+print(holi.bred)
 print("Precaution : Enter The Existing filename You Want To Rename Otherwise This Leads To Replaces The filenames To One-Another!")
 print()
-print("If You Mistakenly Enter Wrong filename To Rename, I Am Not Responsible! Although, It Ask Again To You To Verify")
+print("If You Mistakenly Enter Wrong filename To Rename, I Am Not Responsible! Although, It Ask Again To You To Verify", holi.resetAll)
 print(holi.lgreen)
 print("The filename must be in lowercase else it may replace the existing filenames")
-print(holi.reset)
+print(holi.resetAll)
 
 # making this user friendly
 path = input("Enter Path To Directory : ")
@@ -63,3 +63,4 @@ for file in else_name_li:
 		except FileExistsError:
 			num += 1
 		
+
