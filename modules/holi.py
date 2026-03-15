@@ -59,14 +59,14 @@ normal  = claAS.NORMAL
 resetStyle = claAS.RESET_ALL
 
 # AnsiFore (text color) + AnsiStyle
-bblack = claAF.BLACK, claAS.BRIGHT
-bred =  claAF.RED, claAS.BRIGHT
-bgreen = claAF.GREEN, claAS.BRIGHT
-bwhite = claAF.WHITE, claAS.BRIGHT
-byellow = claAF.YELLOW, claAS.BRIGHT
-bblue = claAF.BLUE, claAS.BRIGHT
-bcyan = claAF.CYAN, claAS.BRIGHT
-bmagenta = claAF.MAGENTA, claAS.BRIGHT
+bblack = claAF.BLACK + claAS.BRIGHT
+bred =  claAF.RED + claAS.BRIGHT
+bgreen = claAF.GREEN + claAS.BRIGHT
+bwhite = claAF.WHITE + claAS.BRIGHT
+byellow = claAF.YELLOW + claAS.BRIGHT
+bblue = claAF.BLUE + claAS.BRIGHT
+bcyan = claAF.CYAN + claAS.BRIGHT
+bmagenta = claAF.MAGENTA + claAS.BRIGHT
 
 # resetStyle leads To Reset The Color As well, So Does resetAll
 resetAll = claAS.RESET_ALL
