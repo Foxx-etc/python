@@ -313,6 +313,18 @@ class DictWork:
         return ""
 
 
+    def getkey(d, value):
+        """If Raised A KeyError, Then In Default dict, The Key Is Overriden By Value, So Does Here The Same"""
+        if type(d) is not dict:
+            raise TypeError('argument accepts <class dict>')
+            
+        inv_di = {}      
+        for (k,v) in zip(d.keys(), d.values()):
+            inv_di[v] = k
+        return inv_di[value]
+
+
+
 class Restricted:
 
     def only_alpha(prom= "Enter : ", mess= "No Numbers!\n"):
