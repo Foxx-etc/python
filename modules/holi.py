@@ -27,7 +27,7 @@ It's No Use For You!
 """
 
 
-#AnsiFore (text color)
+# AnsiFore (text color)
 claAF = cl.ansi.AnsiFore()
 
 black = claAF.BLACK
@@ -52,8 +52,21 @@ reset = claAF.RESET
 
 #AnsiStyle
 claAS = cl.ansi.AnsiStyle()
+
 bright = claAS.BRIGHT
 dim = claAS.DIM
 normal  = claAS.NORMAL
 resetStyle = claAS.RESET_ALL
 
+# AnsiFore (text color) + AnsiStyle
+bblack = claAF.BLACK, claAS.BRIGHT
+bred =  claAF.RED, claAS.BRIGHT
+bgreen = claAF.GREEN, claAS.BRIGHT
+bwhite = claAF.WHITE, claAS.BRIGHT
+byellow = claAF.YELLOW, claAS.BRIGHT
+bblue = claAF.BLUE, claAS.BRIGHT
+bcyan = claAF.CYAN, claAS.BRIGHT
+bmagenta = claAF.MAGENTA, claAS.BRIGHT
+
+# resetStyle leads To Reset The Color As well, So Does resetAll
+resetAll = claAS.RESET_ALL
