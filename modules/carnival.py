@@ -164,7 +164,7 @@ class Count:
             raise TypeError(f"parameter must not be: str, int, or float")
         self.iterable = iterable
 
-    def count_str(self) -> int:
+    def countstr(self) -> int:
         """
         Counts The Number Of String In Iterables and Return Int value
         """
@@ -178,7 +178,7 @@ class Count:
         return int(number)
 
 
-    def count_int(self) -> int:
+    def countint(self) -> int:
         """
         Counts The Number Of Integer Values In Iterables and Return Int value
         """
@@ -191,7 +191,7 @@ class Count:
         return int(number)
 
 
-    def count_float(self) -> int:
+    def countfloat(self) -> int:
         """
         Counts The Number Of Float Values In Iterables and Return Int value
         """
