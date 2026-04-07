@@ -96,6 +96,8 @@ class UpdateStr:
     """
     
     def __init__(self, string):
+        if not isinstance(string, str):
+            raise TypeError("argument must be a string")
         self.string = string
 
     def staystr(self , preserve_space=True) -> str:
@@ -104,10 +106,6 @@ class UpdateStr:
         Removes Everything except alphabets
         parameter: preserve_space is True, won't removing spaces. If False, all the whitespace charachter are removed. 
         """
-
-        if not isinstance(self.string, str):
-            raise TypeError("argument must be string")
-        
         ss = ""	
         for i in self.string:
             if i.isalpha():
@@ -129,10 +127,7 @@ class UpdateStr:
         Parameter must be a string otherwise a TypeError is raised
         Removes Everything except Numbers
         parameter: preserve_space is True, then it won't removing spaces
-        """
-        if not isinstance(self.string, str):
-            raise TypeError("Argument must be a string")
-        
+        """   
         si = ""	
         for i in self.string:
             if i.isnumeric():
@@ -152,10 +147,7 @@ class UpdateStr:
     def dropspace(self) -> str:
         """
         Removes The Space In String And Joins The Characters
-        """
-        if not isinstance(self.string, str):
-            raise TypeError(f"parameter must be a string not {type(self.string)}")
-        
+        """      
         new_str = ""
         for i in self.string:
             if i.isspace():
@@ -400,6 +392,6 @@ class Restricted:
 
 
 if __name__ == '__main__':
-    b = ('fd',6, 8.5, 33.3, 'w', 'sdfsf')
-    a = Count(b).count_float()
+    b = ('fd',6, 8.5, 33.3, 'w', 'sdfs89f')
+    a = UpdateStr(b[5]).staystr()
     print(a)
