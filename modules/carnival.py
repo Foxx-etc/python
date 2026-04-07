@@ -3,8 +3,6 @@
 class Verify:
     """
     All the functions defined under this class returns boolean value
-
-    The constructor must be an iterable..
     """
     def __init__(self, iterable):
         self.iterable = iterable
