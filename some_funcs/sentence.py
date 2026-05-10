@@ -1,6 +1,6 @@
 
 
-import space_aft_syms as s
+import space_aft_symb as s
 
 # TODO: require upgrade
 def sentence(a):
